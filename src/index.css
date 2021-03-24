@@ -1,0 +1,17 @@
+body {
+  background: #000;
+}
+
+@media print {
+  #pager,
+  .no-print {
+    display: none !important;
+    height: 0;
+  }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+    height: 0;
+  }
+}
