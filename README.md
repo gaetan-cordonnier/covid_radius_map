@@ -1,3 +1,37 @@
+# Follow The Market Covid-19 Tool Application
+
+This project aims to display a radius of 10km around its home and to geolocate our location on the map.
+
+Follow the instructions below.
+
+## Getting started
+
+```sh
+git clone repo
+cd repo
+npm install
+npm start
+
+```
+
+## Scripts:
+
+- Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - `npm start`
+
+## We use in this project
+
+- [react-leaflet](https://react-leaflet.js.org/)
+  - Map.
+- [leaflet](https://leafletjs.com/)
+  - Map components.
+- [styled-components](https://styled-components.com/)
+  - Framework CSS.
+- [leaflet-control-geocoder](leaflet-control-geocoder)
+  - A simple geocoder for Leaflet that by default uses OSM/Nominatim.
+- [https://github.com/mhnpd/react-loader-spinner](spinner)
+  - For displaying loading animation on application.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

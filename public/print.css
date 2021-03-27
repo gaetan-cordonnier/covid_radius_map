@@ -1,0 +1,31 @@
+@media print {
+  #pager {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  footer,
+  header > * {
+    display: none !important;
+    height: 0;
+    border: none;
+  }
+
+  /* Adresse de la recherche */
+  .printInfo {
+    color: #000 !important;
+  }
+
+  /* Barre de recherche */
+  .leaflet-bar,
+  leaflet-control > * {
+    display: none !important;
+    height: 0;
+  }
+  /* Bouton imprimer */
+  .no-print {
+    display: none !important;
+    height: 0;
+  }
+}
