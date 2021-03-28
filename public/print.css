@@ -12,8 +12,13 @@
     border: none;
   }
 
+  main > * {
+    min-width: 1024px;
+    min-height: 670px;
+  }
+
   /* Adresse de la recherche */
-  .printInfo {
+  .printInfo > * {
     color: #000 !important;
   }
 

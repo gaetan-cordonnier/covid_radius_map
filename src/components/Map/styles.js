@@ -7,7 +7,7 @@ const customMedia = generateMedia({
 });
 
 export const PrintAddress = styled.p`
-  z-index: 1000;
+  z-index: 2100;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -19,7 +19,7 @@ export const PrintAddress = styled.p`
 `;
 
 export const LogoFTM = styled.div`
-  z-index: 1000;
+  z-index: 1500;
   width: 170px;
   height: auto;
   position: absolute;
@@ -32,7 +32,7 @@ export const LogoFTM = styled.div`
 
 export const PrintButton = styled.img`
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1500;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -78,7 +78,7 @@ export const DivMain = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 85vh;
+  height: auto;
   background-color: #000;
   padding: 5px;
 

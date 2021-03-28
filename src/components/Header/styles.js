@@ -13,7 +13,7 @@ export const DivHeader = styled.header`
   align-items: center;
   background-color: #000;
   width: 100%;
-  height: 7vh;
+  min-height: 40px;
   border-bottom: 0.5px solid #7aedad;
   font-family: "Montserrat", "Roboto", sans-serif;
   color: #7aedad;
