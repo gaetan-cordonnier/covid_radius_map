@@ -15,9 +15,14 @@ const UserMarker = () => {
         const latlng = [position.coords.latitude, position.coords.longitude];
         marker(latlng, { icon })
           .setLatLng(latlng)
-          .addTo(map)
-          .bindPopup("Vous êtes ici.");
+          .bindPopup("Vous êtes ici.")
+          .addTo(map);
         map.panTo(latlng);
+        L.circle(latlng, {
+          color: "#000",
+          fillColor: "#7AEDAD",
+          radius: 10000,
+        }).addTo(map);
       });
     } else {
       alert("Problème lors de la géolocalisation.");

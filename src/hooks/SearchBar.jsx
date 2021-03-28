@@ -37,17 +37,8 @@ const SearchBar = () => {
           .bindPopup(e.geocode.name)
           .openPopup()
           .addTo(layerGroup);
-
         map.panTo(latlng);
-
-        L.circle(latlng, {
-          color: "#000",
-          fillColor: "#7AEDAD",
-          radius: 10000,
-        }).addTo(layerGroup);
-
         setPrintInfo(e.geocode.name);
-
         map.addLayer(layerGroup);
       })
       .addTo(map);
