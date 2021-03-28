@@ -91,6 +91,7 @@ export const DivMain = styled.main`
       height: 100%;
   }
 
+
   .leaflet-popup-tip, .leaflet-popup-content-wrapper {
     font-family: 'Montserrat', 'Roboto', sans-serif;
     text-align: center;
@@ -101,6 +102,8 @@ export const DivMain = styled.main`
   .leaflet-container a {
     color: #000;
     }
+
+
   .leaflet-container a.leaflet-active {
     outline: 2px solid #888;
     }

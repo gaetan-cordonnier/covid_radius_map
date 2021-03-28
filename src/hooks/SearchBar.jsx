@@ -7,10 +7,12 @@ import icon from "./../constants/homeIcon";
 
 import { PrintAddress } from "../components/Map/styles";
 
+const layerGroup = L.layerGroup();
+
 const SearchBar = () => {
   const map = useMap();
 
-  let [printInfo, setPrintinfo] = useState("");
+  let [printInfo, setPrintInfo] = useState("");
 
   useEffect(() => {
     let geocoder = L.Control.Geocoder.nominatim({
@@ -21,6 +23,7 @@ const SearchBar = () => {
         countrycodes: "fr",
       },
     });
+
     L.Control.geocoder({
       query: "",
       placeholder: "Ex: 2 Rue Haddock Villeneuve-d'Ascq",
@@ -28,18 +31,24 @@ const SearchBar = () => {
       geocoder,
     })
       .on("markgeocode", function (e) {
+        layerGroup.clearLayers();
         let latlng = e.geocode.center;
         L.marker(latlng, { icon })
           .bindPopup(e.geocode.name)
           .openPopup()
-          .addTo(map);
+          .addTo(layerGroup);
+
         map.panTo(latlng);
+
         L.circle(latlng, {
           color: "#000",
           fillColor: "#7AEDAD",
           radius: 10000,
-        }).addTo(map);
-        setPrintinfo(e.geocode.name);
+        }).addTo(layerGroup);
+
+        setPrintInfo(e.geocode.name);
+
+        map.addLayer(layerGroup);
       })
       .addTo(map);
   }, [map]);
