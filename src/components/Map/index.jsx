@@ -11,6 +11,9 @@ export default function Map() {
   const defautLocation = [48.856614, 2.3522219];
   const [isPrinting, setIsPrinting] = useState(false);
   const onClick = () => setIsPrinting(true);
+  // const [circle, setCircle] = useState(false);
+  // const toggleSearch = () => setCircle(!circle);
+
 
   useEffect(() => {
     if (isPrinting) {
@@ -18,6 +21,10 @@ export default function Map() {
       setIsPrinting(false);
     }
   }, [isPrinting]);
+
+  // useEffect(() => {
+  //   console.log(circle)
+  // }, [circle]);
 
   return (
     <S.DivMain>
@@ -34,6 +41,9 @@ export default function Map() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        {/* <S.RevertSearch className="no-print"
+          src="/img/reverse.svg"
+          onClick={toggleSearch}/> */}
         <S.PrintButton
           className="no-print"
           src="/img/print.png"

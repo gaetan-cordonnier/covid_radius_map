@@ -6,6 +6,19 @@ const customMedia = generateMedia({
   xsmall: "359px",
 });
 
+export const RevertSearch = styled.img`
+  cursor: pointer;
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top 60px;
+  margin-right: 20px;
+  height: 3em;
+  width: auto;
+  border-radius: 25px:
+`;
+
 export const PrintAddress = styled.p`
   z-index: 2100;
   position: absolute;
@@ -36,8 +49,8 @@ export const PrintButton = styled.img`
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-bottom: 25px;
-  margin-right: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   height: 4em;
   width: auto;
   border-radius: 25px:
@@ -72,6 +85,9 @@ export const PrintButton = styled.img`
 `;
 
 export const DivMain = styled.main`
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex: 1;
   flex-direction: column;
