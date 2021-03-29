@@ -24,14 +24,13 @@ export default function Map() {
 
   return (
     <S.DivMain>
-
       <Loader
-      className="spinner"
-      type="ThreeDots"
-      color="#F5F5F5"
-      height={100}
-      width={100}
-      timeout={1500}
+        className="spinner"
+        type="ThreeDots"
+        color="#F5F5F5"
+        height={100}
+        width={100}
+        timeout={1500}
       />
 
       <MapContainer
@@ -41,7 +40,6 @@ export default function Map() {
         scrollWheelZoom={true}
         zoomControl={true}
       >
-        
         <SearchHome />
 
         <TileLayer
@@ -49,8 +47,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Link to="/">
-          <S.RevertSearch className="no-print"
-            src="/img/reverse.svg"/>
+          <S.RevertSearch className="no-print" src="/img/reverse.svg" />
         </Link>
 
         <S.PrintButton
@@ -68,7 +65,6 @@ export default function Map() {
             <img src="/img/logo-black.svg" alt="logo" />
           </a>
         </S.LogoFTM>
-
       </MapContainer>
     </S.DivMain>
   );

@@ -12,14 +12,16 @@ const homeIcon = L.icon({
   iconRetinaUrl: "/img/house.png",
   iconSize: [42, 42],
   iconAnchor: [21, 42],
-  popupAnchor: [0, -42],});
+  popupAnchor: [0, -42],
+});
 
 const positionIcon = L.icon({
   iconUrl: "/img/marker.png",
   iconRetinaUrl: "/img/marker.png",
   iconSize: [42, 42],
   iconAnchor: [21, 42],
-  popupAnchor: [0, -42],});
+  popupAnchor: [0, -42],
+});
 
 const SearchHome = () => {
   const map = useMap();
@@ -45,15 +47,15 @@ const SearchHome = () => {
       .on("markgeocode", function (e) {
         layerGroup.clearLayers();
         let latlng = e.geocode.center;
-        L.marker(latlng, {icon: homeIcon})
+        L.marker(latlng, { icon: homeIcon })
           .bindPopup(e.geocode.name)
           .openPopup()
           .addTo(layerGroup);
-          L.circle(latlng, {
-            color: "#000",
-            fillColor: "#7AEDAD",
-            radius: 10000,
-          }).addTo(map);
+        L.circle(latlng, {
+          color: "#000",
+          fillColor: "#7AEDAD",
+          radius: 10000,
+        }).addTo(map);
         map.panTo(latlng);
         setPrintInfo(e.geocode.name);
         map.addLayer(layerGroup);
@@ -66,7 +68,7 @@ const SearchHome = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const latlng = [position.coords.latitude, position.coords.longitude];
-        marker(latlng, {icon: positionIcon})
+        marker(latlng, { icon: positionIcon })
           .setLatLng(latlng)
           .bindPopup("Vous êtes ici.")
           .addTo(map);

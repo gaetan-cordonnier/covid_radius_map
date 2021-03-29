@@ -10,10 +10,10 @@ import "leaflet/dist/leaflet.css";
 import * as S from "./styles.js";
 
 export default function Map() {
-const defautLocation = [48.856614, 2.3522219];
+  const defautLocation = [48.856614, 2.3522219];
 
-const [isPrinting, setIsPrinting] = useState(false);
-const onClick = () => setIsPrinting(true);
+  const [isPrinting, setIsPrinting] = useState(false);
+  const onClick = () => setIsPrinting(true);
 
   useEffect(() => {
     if (isPrinting) {
@@ -24,15 +24,14 @@ const onClick = () => setIsPrinting(true);
 
   return (
     <S.DivMain>
-
-        <Loader
+      <Loader
         className="spinner"
         type="ThreeDots"
         color="#F5F5F5"
         height={100}
         width={100}
         timeout={1500}
-        />
+      />
 
       <MapContainer
         center={defautLocation}
@@ -41,7 +40,6 @@ const onClick = () => setIsPrinting(true);
         scrollWheelZoom={true}
         zoomControl={true}
       >
-        
         <SearchPosition />
 
         <TileLayer
@@ -50,8 +48,7 @@ const onClick = () => setIsPrinting(true);
         />
 
         <Link to="/reverse">
-          <S.RevertSearch className="no-print"
-            src="/img/reverse.svg" />
+          <S.RevertSearch className="no-print" src="/img/reverse.svg" />
         </Link>
 
         <S.PrintButton
@@ -69,7 +66,6 @@ const onClick = () => setIsPrinting(true);
             <img src="/img/logo-black.svg" alt="logo" />
           </a>
         </S.LogoFTM>
-
       </MapContainer>
     </S.DivMain>
   );
