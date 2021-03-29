@@ -20,7 +20,7 @@ export const RevertSearch = styled.img`
 `;
 
 export const PrintAddress = styled.p`
-  z-index: 2100;
+  z-index: 1000;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -32,7 +32,7 @@ export const PrintAddress = styled.p`
 `;
 
 export const LogoFTM = styled.div`
-  z-index: 1500;
+  z-index: 1000;
   width: 170px;
   height: auto;
   position: absolute;
@@ -45,22 +45,20 @@ export const LogoFTM = styled.div`
 
 export const PrintButton = styled.img`
   cursor: pointer;
-  z-index: 1500;
+  z-index: 1000;
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin-bottom: 25px;
+  margin-right: 25px;
   height: 4em;
   width: auto;
-  border-radius: 25px:
 
   ${media.lessThan("huge")`
     margin-bottom: 20px;
     margin-right: 20px;
     height: 3.5em;
     width: auto;
-    border-radius: 20px:
   `}
 
   ${media.lessThan("large")`
@@ -99,7 +97,8 @@ export const DivMain = styled.main`
   padding: 5px;
 
   ${media.lessThan("large")`
-    padding: 0px;
+    padding-bottom: 2px;
+    padding-top: 2px;
   `}
 
   .leaflet-container {
@@ -112,7 +111,6 @@ export const DivMain = styled.main`
     height: 100%;
   }
 
-
   .leaflet-popup-tip, .leaflet-popup-content-wrapper {
     font-family: 'Montserrat', 'Roboto', sans-serif;
     text-align: center;
@@ -123,8 +121,6 @@ export const DivMain = styled.main`
   .leaflet-container a {
     color: #000;
     }
-
-
   .leaflet-container a.leaflet-active {
     outline: 2px solid #888;
     }
