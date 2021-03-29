@@ -103,8 +103,13 @@ export const DivMain = styled.main`
   `}
 
   .leaflet-container {
-      width: 100%;
-      height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
   }
 
 
