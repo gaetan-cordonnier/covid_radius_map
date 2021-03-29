@@ -43,6 +43,45 @@ export const LogoFTM = styled.div`
   opacity: 60%;
 `;
 
+export const CertificateButton = styled.img`
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 95px;
+  margin-right: 25px;
+  height: 4em;
+  width: auto;
+
+  ${media.lessThan("huge")`
+    margin-bottom: 75px;
+    margin-right: 20px;
+    height: 3.5em;
+    width: 3.5;
+  `}
+
+  ${media.lessThan("large")`
+    height: 3.2em;
+    width: auto;
+  `}
+
+  ${media.lessThan("medium")`
+    height: 3em;
+    width: auto;
+  `}
+
+  ${media.lessThan("small")`
+    height: 2.8em;
+    width: auto;
+  `}
+
+  ${customMedia.lessThan("xsmall")`
+    height: 2.5em;
+    width: auto;
+  `}
+`;
+
 export const PrintButton = styled.img`
   cursor: pointer;
   z-index: 1000;

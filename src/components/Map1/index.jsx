@@ -51,6 +51,17 @@ export default function Map() {
           <S.RevertSearch className="no-print" src="/img/reverse.svg" />
         </Link>
 
+        <a
+          href="https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <S.CertificateButton
+            src="/img/certificate.svg"
+            alt="Attestation Covid"
+          />
+        </a>
+
         <S.PrintButton
           className="no-print"
           src="/img/print.svg"
