@@ -7,6 +7,7 @@ import L from "leaflet";
 import { PrintAddress } from "../components/Map2/styles";
 
 const layerGroup = L.layerGroup();
+
 const homeIcon = L.icon({
   iconUrl: "/img/house.png",
   iconRetinaUrl: "/img/house.png",
@@ -27,6 +28,27 @@ const SearchPosition = () => {
   const map = useMap();
 
   let [printInfo, setPrintInfo] = useState("");
+
+  useEffect(() => {
+    const marker = L.marker;
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const latlng = [position.coords.latitude, position.coords.longitude];
+        marker(latlng, { icon: homeIcon })
+          .setLatLng(latlng)
+          .bindPopup("Vous êtes ici.")
+          .addTo(map);
+        map.panTo(latlng);
+        L.circle(latlng, {
+          color: "#000",
+          fillColor: "#7AEDAD",
+          radius: 10000,
+        }).addTo(map);
+      });
+    } else if (!navigator.geolocation) {
+      alert("Problème lors de la géolocalisation.");
+    }
+  }, [map]);
 
   useEffect(() => {
     let geocoder = L.Control.Geocoder.nominatim({
@@ -56,27 +78,6 @@ const SearchPosition = () => {
         map.addLayer(layerGroup);
       })
       .addTo(map);
-  }, [map]);
-
-  useEffect(() => {
-    const marker = L.marker;
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        const latlng = [position.coords.latitude, position.coords.longitude];
-        marker(latlng, { icon: homeIcon })
-          .setLatLng(latlng)
-          .bindPopup("Vous êtes ici.")
-          .addTo(map);
-        map.panTo(latlng);
-        L.circle(latlng, {
-          color: "#000",
-          fillColor: "#7AEDAD",
-          radius: 10000,
-        }).addTo(map);
-      });
-    } else if (!navigator.geolocation) {
-      alert("Problème lors de la géolocalisation.");
-    }
   }, [map]);
 
   return <PrintAddress className="printInfo">{printInfo}</PrintAddress>;

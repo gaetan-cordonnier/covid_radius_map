@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Map1} />
-          <Route exact path="/reverse" component={Map2} />
+          <Route path="/reverse" component={Map2} />
         </Switch>
         <Footer />
       </Router>
