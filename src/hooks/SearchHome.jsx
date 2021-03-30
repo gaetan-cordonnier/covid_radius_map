@@ -4,7 +4,7 @@ import { useMap } from "react-leaflet";
 import "leaflet-control-geocoder/dist/Control.Geocoder.js";
 import L from "leaflet";
 
-import { PrintAddress } from "../components/Map1/styles";
+import { PrintAddress } from "../components/Map/styles";
 
 const layerGroup = L.layerGroup();
 

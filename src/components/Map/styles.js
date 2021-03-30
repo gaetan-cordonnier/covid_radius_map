@@ -6,19 +6,6 @@ const customMedia = generateMedia({
   xsmall: "359px",
 });
 
-export const RevertSearch = styled.img`
-  cursor: pointer;
-  z-index: 999;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top 60px;
-  margin-right: 20px;
-  height: 3em;
-  width: auto;
-  border-radius: 25px:
-`;
-
 export const PrintAddress = styled.p`
   z-index: 1000;
   position: absolute;

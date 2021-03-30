@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { Link } from "react-router-dom";
-
+import Modal from "./../Modal"
 import { MapContainer, TileLayer } from "react-leaflet";
-import Loader from "react-loader-spinner";
+
 import SearchHome from "./../../hooks/SearchHome";
 
 import "leaflet/dist/leaflet.css";
@@ -24,15 +23,7 @@ export default function Map() {
 
   return (
     <S.DivMain>
-      <Loader
-        className="spinner"
-        type="ThreeDots"
-        color="#F5F5F5"
-        height={100}
-        width={100}
-        timeout={1500}
-      />
-
+      <Modal />
       <MapContainer
         center={defautLocation}
         zoom={11}
@@ -46,9 +37,6 @@ export default function Map() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Link to="/">
-          <S.RevertSearch className="no-print" src="/img/reverse.svg" />
-        </Link>
 
         <a
           href="https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/"
