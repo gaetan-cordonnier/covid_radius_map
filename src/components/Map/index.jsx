@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Modal from "./../Modal"
+import Modal from "./../Modal";
 import { MapContainer, TileLayer } from "react-leaflet";
 
 import SearchHome from "./../../hooks/SearchHome";
@@ -44,6 +44,7 @@ export default function Map() {
           rel="noreferrer"
         >
           <S.CertificateButton
+            className="no-print"
             src="/img/certificate.svg"
             alt="Attestation Covid"
           />

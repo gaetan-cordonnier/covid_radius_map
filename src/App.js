@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <Reset />
-        <Header />
-        <Map/>
-        <Footer />
+      <Header />
+      <Map />
+      <Footer />
     </>
   );
 }
