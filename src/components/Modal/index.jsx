@@ -7,19 +7,24 @@ import * as S from "./styles.js";
 export default function Modal() {
   const [isOpen, setIsOpen] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     const isRead = localStorage.getItem("value");
-    if (isRead){
-  setIsOpen(false)
-    } else if (!isRead){setIsOpen(true)};
-  },[])
+    if (isRead) {
+      setIsOpen(false);
+    } else if (!isRead) {
+      setIsOpen(true);
+    }
+  }, []);
 
   return (
     <>
       {isOpen && (
         <S.DivModal>
           <button
-            className="close" onClick={()=>{ setIsOpen(false) || localStorage.setItem("value", false)}}
+            className="close"
+            onClick={() => {
+              setIsOpen(false) || localStorage.setItem("value", false);
+            }}
           />
           <p>
             Saisir une adresse dans la barre de recherche pour visualiser la
