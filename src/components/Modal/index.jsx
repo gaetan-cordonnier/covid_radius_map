@@ -5,13 +5,12 @@ import Loader from "react-loader-spinner";
 import * as S from "./styles.js";
 
 export default function Modal() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const isRead = localStorage.getItem("value");
-    if (isRead) {
-      setIsOpen(false);
-    } else if (!isRead) {
+    const isRead = localStorage.getItem("isRead:");
+
+    if (!isRead) {
       setIsOpen(true);
     }
   }, []);
@@ -23,7 +22,7 @@ export default function Modal() {
           <button
             className="close"
             onClick={() => {
-              setIsOpen(false) || localStorage.setItem("value", false);
+              setIsOpen(false) || localStorage.setItem("isRead:", true);
             }}
           />
           <p>
