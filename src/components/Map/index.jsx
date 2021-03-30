@@ -12,7 +12,7 @@ export default function Map() {
   const defautLocation = [48.856614, 2.3522219];
 
   const [isPrinting, setIsPrinting] = useState(false);
-  const onClick = () => setIsPrinting(true);
+  const print = () => setIsPrinting(true);
 
   useEffect(() => {
     if (isPrinting) {
@@ -53,7 +53,7 @@ export default function Map() {
         <S.PrintButton
           className="no-print"
           src="/img/print.svg"
-          onClick={onClick}
+          onClick={print}
         />
 
         <S.LogoFTM>
