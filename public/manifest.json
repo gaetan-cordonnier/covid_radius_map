@@ -1,7 +1,7 @@
 {
   "short_name" : "Map 10km" ,
   "name " :"FTM Covid-19 Map 10km" ,
-  "theme_color": "##7aedad",
+  "theme_color": "#7aedad",
   "background_color": "#000000",
   "display": "fullscreen",
   "Scope": "/",
