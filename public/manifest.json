@@ -1,20 +1,27 @@
 {
-  " short_name " : " FTM Covid-19 Map " ,
-  " name " : " Application qui affiche rayon de 10km " ,
-  " icônes " : [
+  "short_name" : "Covid-19 Map" ,
+  "name " :"FTM Covid-19 Map 10km" ,
+  "theme_color": "##7aedad",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "Scope": "/",
+  "orientation": "portrait",
+  "icons": [
     {
-      " src " : " chrome-touch-icon-192x192.png " ,
-      " tailles " : " 192x192 " ,
-      " type " : " image / png "
+      "src": "img/app_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
     },
     {
-      " src " : " android-chrome-512x512.png " ,
-      " tailles " : " 512x512 " ,
-      " type " : " image / png "
+      "src": "imag/app_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "imag/app_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
-  " start_url " : " ./ " ,
-  " display " : " autonome " ,
-  " theme_color " : " # 000000 " ,
-  " background_color " : " #ffffff "
+  "start_url": "index.html?utm_source=homescreen"
 }
