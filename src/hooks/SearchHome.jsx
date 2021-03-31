@@ -46,7 +46,7 @@ const SearchHome = () => {
   }, [map]);
 
   useEffect(() => {
-    let geocoder = L.Control.Geocoder.nominatim({serviceUrl: 'http://35.180.152.230/nominatim/'}, {
+    let geocoder = L.Control.Geocoder.nominatim({serviceUrl: 'https://35.180.152.230/nominatim/'}, {
       geocodingQueryParams: {
         limit: 3,
         addressdetails: 1,
