@@ -1,5 +1,5 @@
 {
-  "short_name" : "Covid-19 Map" ,
+  "short_name" : "Map 10km" ,
   "name " :"FTM Covid-19 Map 10km" ,
   "theme_color": "##7aedad",
   "background_color": "#000000",
@@ -8,17 +8,17 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "img/app_48.png",
+      "src": "/img/app_48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "imag/app_96.png",
+      "src": "/img/app_96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "imag/app_192.png",
+      "src": "/img/app_192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
