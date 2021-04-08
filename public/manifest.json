@@ -21,7 +21,13 @@
       "src": "/img/app_192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "/img/app_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
+
   ],
   "start_url": "index.html?utm_source=homescreen"
 }
