@@ -10,6 +10,8 @@ Follow the instructions below.
 git clone repo
 cd repo
 npm install
+create .env file
+remplace example url by correct address nominatim on .env file
 npm start
 
 ```
