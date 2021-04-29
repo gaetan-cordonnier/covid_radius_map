@@ -6,6 +6,8 @@ import L from "leaflet";
 
 import { PrintAddress } from "../components/Map/styles";
 
+import { NOMINATIM_URL } from "../env";
+
 const layerGroup = L.layerGroup();
 
 const homeIcon = L.icon({
@@ -49,6 +51,7 @@ const SearchHome = () => {
 
   useEffect(() => {
     let geocoder = L.Control.Geocoder.nominatim({
+      serviceUrl: `${NOMINATIM_URL}`,
       geocodingQueryParams: {
         limit: 3,
         addressdetails: 1,
