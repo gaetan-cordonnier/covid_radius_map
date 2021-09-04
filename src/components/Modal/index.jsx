@@ -26,7 +26,7 @@ export default function Modal() {
             }}
           />
           <p>
-            Saisir une adresse dans la barre de recherche pour visualiser la
+            Saisir votre adresse dans la barre de recherche pour visualiser la
             zone des 10km.*
           </p>
           <br />
